@@ -18,15 +18,30 @@
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .header, .section {
-            margin-bottom: 20px;
+        .header {
+            text-align: center;
+            background-color: #0073e6;
+            color: #fff;
+            padding: 20px 0;
         }
         .header h1 {
             margin: 0;
+            font-size: 2.5em;
+        }
+        .section {
+            margin-bottom: 20px;
         }
         .section h2 {
-            border-bottom: 2px solid #000;
-            padding-bottom: 5px;
+            background-color: #0073e6;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .section ul {
+            padding-left: 20px;
+        }
+        .section ul li {
+            margin-bottom: 10px;
         }
         .contact-info, .education, .experience, .skills, .certifications {
             list-style-type: none;
@@ -35,7 +50,58 @@
         .contact-info li, .education li, .experience li, .skills li, .certifications li {
             margin-bottom: 10px;
         }
+        .contact-info a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .skills li {
+            display: inline-block;
+            background-color: #0073e6;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .skills li strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .toggle-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .toggle-button:hover {
+            background-color: #005bb5;
+        }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll(".section");
+            sections.forEach(section => {
+                const button = document.createElement("button");
+                button.className = "toggle-button";
+                button.textContent = "Toggle " + section.querySelector("h2").textContent;
+                button.addEventListener("click", () => {
+                    const content = section.querySelector("ul, p");
+                    if (content.style.display === "none") {
+                        content.style.display = "";
+                    } else {
+                        content.style.display = "none";
+                    }
+                });
+                section.insertBefore(button, section.querySelector("h2").nextSibling);
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
