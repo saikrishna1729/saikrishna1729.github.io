@@ -69,38 +69,9 @@
             display: block;
             margin-bottom: 5px;
         }
-        .toggle-button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #0073e6;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .toggle-button:hover {
-            background-color: #005bb5;
-        }
     </style>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll(".section");
-            sections.forEach(section => {
-                const button = document.createElement("button");
-                button.className = "toggle-button";
-                button.textContent = "Toggle " + section.querySelector("h2").textContent;
-                button.addEventListener("click", () => {
-                    const content = section.querySelector("ul, p");
-                    if (content.style.display === "none") {
-                        content.style.display = "";
-                    } else {
-                        content.style.display = "none";
-                    }
-                });
-                section.insertBefore(button, section.querySelector("h2").nextSibling);
-            });
-        });
+        // Removed toggle button functionality
     </script>
 </head>
 <body>
