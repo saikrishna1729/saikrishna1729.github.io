@@ -4,98 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            text-align: center;
-            color: #fff;
-            padding: 20px 0;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .section h2 {
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .section ul {
-            padding-left: 20px;
-        }
-        .section ul li {
-            margin-bottom: 10px;
-        }
-        .contact-info, .education, .experience, .skills, .certifications {
-            list-style-type: none;
-            padding: 0;
-        }
-        .contact-info li, .education li, .experience li, .skills li, .certifications li {
-            margin-bottom: 10px;
-        }
-        .contact-info a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        .skills li {
-            display: inline-block;
-            background-color: #0073e6;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            margin: 5px;
-        }
-        .skills li strong {
-            display: block;
-            margin-bottom: 5px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>NAGISETTI SAI KRISHNA</h1>
-            <ul class="contact-info">
+<body class="bg-gray-100">
+    <div class="container mx-auto bg-white p-8 shadow-lg mt-10">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold">NAGISETTI SAI KRISHNA</h1>
+            <ul class="mt-4">
                 <li>#8-602, 310C PUNGGOL WALK</li>
                 <li>Email: saikrishna.nagisetti@gmail.com</li>
                 <li>Phone: +65 96464284</li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/saikrishna-nagisetti/">linkedin.com/in/saikrishna-nagisetti</a></li>
-                <li>GitHub: <a href="https://github.com/saikrishna1729">github.com/saikrishna1729</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/saikrishna-nagisetti/" class="text-blue-500">linkedin.com/in/saikrishna-nagisetti</a></li>
+                <li>GitHub: <a href="https://github.com/saikrishna1729" class="text-blue-500">github.com/saikrishna1729</a></li>
             </ul>
         </div>
-        <div class="section">
-            <h2>Summary</h2>
-            <p>Cloud Solutions Architect with 6+ years of experience in designing and managing cloud infrastructure on Azure and AWS, complemented by 14 years in the IT infrastructure domain.</p>
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold border-b-2 border-gray-300 pb-2">Summary</h2>
+            <p class="mt-4">Cloud Solutions Architect with 6+ years of experience in designing and managing cloud infrastructure on Azure and AWS, complemented by 14 years in the IT infrastructure domain.</p>
             <p>Expertise in cloud migrations, cloud security, IT infrastructure planning, automation, and disaster recovery.</p>
             <p>Proven track record in leading cloud adoption initiatives, optimizing environments, and implementing DevOps practices using tools such as Terraform, Ansible, Jenkins, and PowerShell.</p>
             <p>Strong background in security, identity management (Azure AD, Active Directory), and delivering impactful Proof-of-Concepts (PoCs) for emerging technologies.</p>
             <p>Committed to mentoring teams and promoting best practices in cloud architecture and infrastructure automation.</p>
         </div>
-        <div class="section">
-            <h2>Professional Experience</h2>
-            <ul class="experience">
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold border-b-2 border-gray-300 pb-2">Professional Experience</h2>
+            <ul class="mt-4 space-y-4">
                 <li>
                     <strong>Cloud Architect, CMA CGM Asia Pacific Ltd.</strong><br>
                     Location: Singapore<br>
-                    <ul>
+                    <ul class="list-disc ml-5 mt-2">
                         <li>Led the design and implementation of cloud solutions across Azure and AWS, optimizing infrastructure for scalability, cost-efficiency, and high availability.</li>
                         <li>Spearheaded PoC initiatives for emerging cloud technologies, working directly with business units to align GenAI projects with cloud services, and successfully delivered MVPs that gained executive buy-in.</li>
                         <li>Enhanced the cloud security posture by implementing CSPM tools (e.g., Trusted Advisor, Azure Cloud Defender), improving governance and reducing risks across cloud environments.</li>
@@ -107,7 +44,7 @@
                 <li>
                     <strong>IT Operations Analyst IV, TD Bank</strong><br>
                     Location: Singapore<br>
-                    <ul>
+                    <ul class="list-disc ml-5 mt-2">
                         <li>Led critical Active Directory upgrades (Windows 2008 R2 to 2012 R2), and provided subject-matter expertise in AD management and Azure AD integration for seamless identity management.</li>
                         <li>Played a key role in cloud operations and infrastructure management, supporting both Windows and Linux environments using Ansible for automation and orchestration of patching, application updates, and security compliance.</li>
                         <li>Championed the use of Terraform for infrastructure provisioning and worked closely with development teams to enable infrastructure-as-code practices, reducing deployment times and ensuring consistency across environments.</li>
@@ -118,7 +55,7 @@
                 <li>
                     <strong>Infrastructure Specialist, American President Lines Ltd.</strong><br>
                     Location: Singapore<br>
-                    <ul>
+                    <ul class="list-disc ml-5 mt-2">
                         <li>Acted as SME for Active Directory and Windows Server technologies, managing AD infrastructure, GPO, and leveraging PowerShell automation to streamline administrative tasks and optimize performance.</li>
                         <li>Spearheaded the migration of on-premises infrastructure to Azure AD Connect, ensuring successful synchronization and upgrades between on-prem and cloud-based directories.</li>
                         <li>Implemented and maintained Antivirus solutions and performed regular security audits, ensuring operational continuity and protection against cyber threats.</li>
@@ -128,7 +65,7 @@
                 <li>
                     <strong>Technology Analyst, Infosys Ltd.</strong><br>
                     Location: Hyderabad<br>
-                    <ul>
+                    <ul class="list-disc ml-5 mt-2">
                         <li>Trained in Java development and later transitioned to infrastructure with a focus on managing Active Directory, Windows Servers, and network integrations.</li>
                         <li>Developed custom PowerShell automation scripts for Active Directory management, including user and group provisioning, enhancing operational efficiency across client environments.</li>
                         <li>Acted as a lead for Active Directory administration, managing GPOs, Sites, and ADUC in large-scale enterprise networks.</li>
@@ -136,9 +73,9 @@
                 </li>
             </ul>
         </div>
-        <div class="section">
-            <h2>Certifications</h2>
-            <ul class="certifications">
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold border-b-2 border-gray-300 pb-2">Certifications</h2>
+            <ul class="list-disc ml-5 mt-4">
                 <li>Certified Kubernetes Administrator (CKA)</li>
                 <li>AWS Solution Architect Associate</li>
                 <li>Azure Solution Architect Expert</li>
@@ -147,9 +84,9 @@
                 <li>ITIL 2011 Foundation</li>
             </ul>
         </div>
-        <div class="section">
-            <h2>Education</h2>
-            <ul class="education">
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold border-b-2 border-gray-300 pb-2">Education</h2>
+            <ul class="list-disc ml-5 mt-4">
                 <li>
                     <strong>Bachelor of Technology</strong><br>
                     Acharya Nagarjuna University, Koneru Lakshmaiah College of Engineering, Andhra Pradesh (India)<br>
@@ -158,9 +95,9 @@
                 </li>
             </ul>
         </div>
-        <div class="section">
-            <h2>Technical Skills</h2>
-            <ul class="skills">
+        <div class="mb-8">
+            <h2 class="text-2xl font-semibold border-b-2 border-gray-300 pb-2">Technical Skills</h2>
+            <ul class="list-disc ml-5 mt-4">
                 <li><strong>Cloud Platforms:</strong> Azure (Landing Zones, OpenAI, Virtual WAN, VM), AWS (Landing Zones, VPC, EC2, EKS, Lambda, Route 53, CloudWatch)</li>
                 <li><strong>Infrastructure as Code (IaC):</strong> Terraform, Cloud Formation, Bicep, ARM Templates</li>
                 <li><strong>Automation:</strong> Ansible, PowerShell, Python (Cloud SDKs), Jenkins, Terraform, Azure DevOps</li>
